@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP800g1/.gradle/caches/transforms-3/0ba784d21d0277f17204a4be0c56e94d/transformed/jetified-Collapsible-Calendar-View-Android-v1.0.3/res/drawable/circle_white_stroke_background.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/.gradle/caches/transforms-3/f7dba62f19c5c2aa7678bc1bfcbacb32/transformed/jetified-Collapsible-Calendar-View-Android-v1.0.3/res/drawable/circle_white_solid_background.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/.gradle/caches/transforms-3/f7dba62f19c5c2aa7678bc1bfcbacb32/transformed/jetified-Collapsible-Calendar-View-Android-v1.0.3/res/drawable/circle_white_stroke_background.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.14114583333333333" />
+        <entry key="..\:/Users/HP800g1/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.5" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/drawable-v24/back_button.xml" value="0.3375" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/activity_base.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/activity_budget.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/activity_investment.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/activity_stock_view.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/activity_trade.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/available.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/bill_adapter.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/exp_adepter.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/report.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/sell.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/stock.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/ARVR/Analytica/app/src/main/res/layout/update.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable-v24/back1.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable-v24/back_button.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable-v24/card.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/back.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/background.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/bottom_line.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/box.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/button.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/button1.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/buy_button.xml" value="0.307" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/cal_back.xml" value="0.3125" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/card1.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/card22.xml" value="0.307" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/card23.xml" value="0.307" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/card25.xml" value="0.307" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/card26.xml" value="0.356" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/card_p.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/circle.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/download_progress_bg_track.xml" value="0.356" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/ic_baseline_amp_stories_24.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/ic_baseline_calendar_month_24.xml" value="0.3125" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.303125" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/ic_baseline_monetization_on_24.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/in_s.xml" value="0.3125" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/portfolio_card.xml" value="0.307" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/se2.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/search.xml" value="0.303125" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/selected_date.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/sell_button.xml" value="0.307" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/stock_card.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/stock_rec.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/submit.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/drawable/view_button.xml" value="0.37083333333333335" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_base.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_budget.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_camera.xml" value="0.340625" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_daily_data.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_data.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_demate.xml" value="0.25" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_image_view.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_investment.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_main.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_scanner.xml" value="0.25" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_stock_view.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_trade.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/activity_web_layout.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/app_bar_main.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/bill_adapter.xml" value="0.5" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/content_main.xml" value="0.23697916666666666" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/delete.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/exp_adepter.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/fragment_done.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/fragment_invest.xml" value="0.25" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/fragment_news.xml" value="0.23697916666666666" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/fragment_opinion.xml" value="0.5" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/fragment_profile.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/news_layout.xml" value="0.23697916666666666" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/offercontainer.xml" value="0.13229166666666667" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/opinion_layout.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/progess.xml" value="0.22" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/report.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/stock.xml" value="0.5" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/layout/update.xml" value="0.33" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/menu/invest_ment.xml" value="0.3546875" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/xml/file_path.xml" value="0.31979166666666664" />
+        <entry key="..\:/Users/HP800g1/Desktop/Analytica/app/src/main/res/xml/network_security_config.xml" value="0.1375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

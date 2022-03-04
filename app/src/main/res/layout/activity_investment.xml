@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Investment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="50dp"
+
+                    android:id="@+id/image"
+                    android:background="#ffffff"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="50dp"/>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:onClick="back"
+                    android:src="@drawable/ic_baseline_home_24"
+                    android:background="@drawable/back_button"
+                    android:layout_height="40dp"/>
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:onClick="refresh"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_baseline_refresh_24"
+                    android:background="@drawable/back_button"
+                    android:layout_height="40dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tata Consultancy"
+                    android:id="@+id/name"
+                    android:layout_marginLeft="70dp"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    tools:fontFamily="@font/nunito_bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="TCS"
+                    android:id="@+id/symb"
+                    android:layout_marginLeft="70dp"
+                    android:textColor="#888888"
+                    android:textSize="20dp"
+                    tools:fontFamily="@font/nunito_semibold" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2875.30 INR"
+                        android:id="@+id/price"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        tools:fontFamily="@font/nunito_bold" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/up"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+3.25 INR"
+                            android:textColor="#888888"
+                            android:textSize="15dp"
+                            tools:fontFamily="@font/nunito_semibold" />
+                        <TextView
+                            android:id="@+id/up_percentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+0.25 %"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#299A5B"
+                            android:textSize="15dp"
+                            tools:fontFamily="@font/nunito_semibold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="High"
+                        android:textColor="#888888"
+                        android:textSize="15dp"
+                        tools:fontFamily="@font/nunito_semibold" />
+                    <TextView
+                        android:id="@+id/high"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2563"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        tools:fontFamily="@font/nunito_bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Low"
+                        android:textColor="#888888"
+                        android:textSize="15dp"
+                        tools:fontFamily="@font/nunito_semibold" />
+                    <TextView
+                        android:id="@+id/low"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2563"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        tools:fontFamily="@font/nunito_bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Amount"
+            android:id="@+id/sad"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#01FBFA"
+            android:textSize="18dp"
+            tools:fontFamily="@font/nunito_bold" />
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/amount"
+            android:background="@drawable/search"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/rupee"
+            android:saveEnabled="false"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#52555B"
+            android:hint="Ex. 1000.00"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunito_semibold"
+            android:layout_height="50dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Note"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#01FBFA"
+            android:textSize="18dp"
+            tools:fontFamily="@font/nunito_bold" />
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/note"
+            android:background="@drawable/search"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_baseline_edit_note_24"
+            android:saveEnabled="false"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#52555B"
+            android:hint="Ex. TCS"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunito_semibold"
+            android:layout_height="50dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Name"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#01FBFA"
+            android:textSize="18dp"
+            tools:fontFamily="@font/nunito_bold" />
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/name1"
+            android:background="@drawable/search"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:saveEnabled="false"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#52555B"
+            android:hint="Ex. Yash Mehta"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunito_semibold"
+            android:layout_height="50dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter UPI ID"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:textColor="#01FBFA"
+            android:textSize="18dp"
+            tools:fontFamily="@font/nunito_bold" />
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/upi"
+            android:cursorVisible="false"
+            android:background="@drawable/search"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_baseline_paypal_24"
+            android:saveEnabled="false"
+            android:visibility="gone"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="5dp"
+            android:textColorHint="#52555B"
+            android:hint="Ex. TCS"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nunito_semibold"
+            android:layout_height="50dp">
+
+        </EditText>
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            app:cardCornerRadius="5dp"
+            android:backgroundTint="#242831"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_height="50dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:src="@drawable/google_pay"
+                android:onClick="pay"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Shares"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#01FBFA"
+            android:textSize="18dp"
+            tools:fontFamily="@font/nunito_bold" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/rec"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</ScrollView>

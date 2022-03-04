@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/overlay"
+        android:background="#CF000000"
+        android:elevation="5dp"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_gravity="center"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="250dp"
+                    android:background="@drawable/card">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="70dp"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/nunito_bold"
+                            android:gravity="center"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="Authenticate"
+                            android:textColor="#FFFFFF"
+                            android:textSize="25dp" />
+                        <com.google.android.gms.common.SignInButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:id="@+id/signin"
+                            android:layout_marginLeft="50dp"
+                            android:layout_gravity="center"
+                            android:foregroundGravity="center"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:text="Please Authenticate To Continue :)"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                </FrameLayout>
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-300dp"
+                    android:src="@drawable/password"
+                    android:padding="25dp"
+                    android:background="@drawable/circle"/>
+
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38.3dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|bottom"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="7.3dp"
+                android:background="@drawable/small_cicle" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/half_circle"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/half_circle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginBottom="10dp"
+            app:lottie_rawRes="@raw/invest_logo"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Analytica"
+
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Financial Partner !"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/bottom"
+        android:textSize="20dp"
+        android:textColor="#888888"
+        android:fontFamily="@font/nunito_bold"
+        />
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="expense_type">
+        <item>Basic Needs</item>
+        <item>Investment</item>
+        <item>Medical</item>
+        <item>Entertainment</item>
+        <item>Debt</item>
+    </string-array>
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Done">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/back_button"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffff"
+            android:text="Expense Details :"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#888888"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back1"
+            android:inputType="text"
+            android:hint="Ex. Rice"
+            android:id="@+id/details"
+            android:fontFamily="@font/nunito_semibold"
+            android:padding="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffff"
+            android:text="Select Expense Type :"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/spinner1"
+                style="@style/mySpinnerItemStyle"
+                android:textColorHint="#ffffff"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:gravity="left|center_vertical"
+                android:background="@drawable/back1"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffff"
+            android:text="Expense Cost (₹) :"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:textColorHint="#888888"
+
+            android:layout_marginRight="10dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:inputType="number"
+            android:hint="Ex. 200"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back1"
+            android:id="@+id/exp"
+            android:fontFamily="@font/nunito_semibold"
+            android:padding="5dp" />
+        <Button
+            android:layout_width="200dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/add"
+            android:layout_height="50dp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Add Expense"
+            android:onClick="add"
+            android:background="@drawable/clc_button"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+
+
+</FrameLayout>

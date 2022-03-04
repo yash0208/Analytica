@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Opinion">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/src"
+            android:textColor="#6AE3D4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="20dp"
+            android:text="Opinions" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:id="@+id/opinion"
+            android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/background"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/nunito_semibold"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:id="@+id/text"
+                android:hint="Type Here"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888" />
+
+            <ImageButton
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:foregroundGravity="center_vertical"
+                android:background="@drawable/ic_baseline_send_24"
+                android:layout_margin="5dp"
+                android:text="Button"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ImageView">
+    <ImageButton
+        android:layout_width="30dp"
+        android:background="@drawable/ic_baseline_share_24"
+        android:layout_gravity="right"
+        android:layout_margin="20dp"
+        android:id="@+id/share"
+
+        android:layout_height="30dp"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="40dp"
+            android:onClick="back"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_button"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_gravity="left|center_vertical"
+            android:layout_height="40dp"/>
+
+        <LinearLayout
+            android:layout_width="356dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Rice"
+                android:textColor="#ffffff"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/image"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="#888888"
+        android:textSize="20dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/cost"
+        android:text="200 Rs"
+        android:fontFamily="@font/nunito_bold"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="#888888"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/type"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="Basic Need"
+        android:fontFamily="@font/nunito_semibold"
+        android:layout_height="wrap_content"/>
+</FrameLayout>
