@@ -212,6 +212,8 @@ public class Investment extends AppCompatActivity {
             viewholder.buy_value.setText("Buy Amount : "+newsData.Amount);
             viewholder.quantity.setText("Total Share : "+newsData.Shares);
             viewholder.cost.setText("Buy Date\n"+newsData.BuyDate);
+            float shares=Float.parseFloat(viewholder.quantity.getText().toString());
+            Log.e("shares",String.valueOf(shares));
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {

@@ -439,7 +439,7 @@ public class Budget extends AppCompatActivity implements OnChartValueSelectedLis
     }
 
     public void home(View view) {
-        Intent i=new Intent(Budget.this,Base.class);
+        Intent i=new Intent(Budget.this,Ground.class);
         i.putExtra("status","2");
         startActivity(i);
     }
@@ -447,8 +447,8 @@ public class Budget extends AppCompatActivity implements OnChartValueSelectedLis
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i=new Intent(Budget.this,Base.class);
-        i.putExtra("status","2");
+
+        Intent i=new Intent(this,Ground.class);
         startActivity(i);
     }
 }

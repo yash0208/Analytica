@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void change(){
         Intent i;
-        i = new Intent(MainActivity.this, Base.class);
+        i = new Intent(MainActivity.this, Ground.class);
         i.putExtra("status","1");
         startActivity(i);
         finish();
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 FirebaseUser user = mAuth.getCurrentUser();
                 if(user!=null){
-                    Intent i=new Intent(MainActivity.this,Base.class);
+                    Intent i=new Intent(MainActivity.this,Ground.class);
                     startActivity(i);
                 }
                 Login();
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(MainActivity.this, "Successful", Toast.LENGTH_SHORT).show();
-                        Intent i=new Intent(MainActivity.this,Budget.class);
+                        Intent i=new Intent(MainActivity.this,Ground.class);
                         startActivity(i);
                         FirebaseUser user = mAuth.getCurrentUser();
                         updateUI(user);

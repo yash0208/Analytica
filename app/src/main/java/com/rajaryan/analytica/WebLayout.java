@@ -32,9 +32,8 @@ public class WebLayout extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i;
-        i = new Intent(WebLayout.this, Base.class);
-        i.putExtra("status","3");
+        onBackPressed();
+        Intent i=new Intent(this,Ground.class);
         startActivity(i);
     }
 }

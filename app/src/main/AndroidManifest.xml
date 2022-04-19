@@ -20,6 +20,9 @@
         android:theme="@style/Theme.Analytica"
         tools:replace="android:appComponentFactory">
         <activity
+            android:name=".Ground"
+            android:exported="false" />
+        <activity
             android:name=".Trade"
             android:exported="false" />
         <activity

@@ -13,6 +13,8 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -112,6 +114,7 @@ public class Base extends AppCompatActivity {
     ImageView image;
     Adapter adapter;
     ViewPager2 viewPager3;
+    EditText search_stock;
     Adapter5 adepter5;
     String status="2";
     @Override
@@ -146,6 +149,22 @@ public class Base extends AppCompatActivity {
         image=findViewById(R.id.image);
         open1=findViewById(R.id.open);
         search=findViewById(R.id.search);
+        search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                listStock(search.getText().toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                listStock(search.getText().toString());
+            }
+        });
         Setcontent();
         String toast=search.getText().toString();
         DatabaseReference artical_title= FirebaseDatabase.getInstance().getReference().child("Articals").child("Tittle");
@@ -506,6 +525,20 @@ public class Base extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void listStock(String stock) {
+        Query query= FirebaseDatabase.getInstance().getReference().child("Companies").orderByChild("Symbol").startAt(stock).endAt(stock);
+        FirebaseRecyclerOptions<Stock> option =
+                new FirebaseRecyclerOptions.Builder<Stock>()
+                        .setQuery(query,Stock.class)
+                        .setLifecycleOwner(this)
+                        .build();
+        rec_inv=findViewById(R.id.rec_inv);
+        adapter=new Adapter(option);
+        adapter.startListening();
+        rec_inv.setAdapter(adapter);
+        rec_inv.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void refresh_data(int millisecond){

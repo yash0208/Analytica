@@ -248,6 +248,7 @@ public class Scanner extends AppCompatActivity {
                                         public void onProgress(
                                                 UploadTask.TaskSnapshot taskSnapshot)
                                         {
+                                            Toast.makeText(getApplicationContext(),"Image Uploading",Toast.LENGTH_SHORT).show();
                                             double progress
                                                     = (100.0
                                                     * taskSnapshot.getBytesTransferred()
@@ -264,9 +265,7 @@ public class Scanner extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i;
-        i = new Intent(Scanner.this, Base.class);
-        i.putExtra("status","2");
+        Intent i=new Intent(this,Ground.class);
         startActivity(i);
     }
 }

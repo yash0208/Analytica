@@ -89,6 +89,7 @@
                 android:textSize="18dp"
                 android:text="Bookmark"
                 android:drawablePadding="10dp"
+                android:visibility="gone"
                 android:padding="10dp"
                 android:fontFamily="@font/nunito_bold"
                 android:drawableLeft="@drawable/ic_baseline_bookmark_border_24"

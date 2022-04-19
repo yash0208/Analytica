@@ -36,9 +36,12 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
@@ -57,14 +60,17 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 
 public class StockView extends AppCompatActivity {
-    WebView webView;
+    WebView webView,web1;
     String link;
     String symbol;
-    TextView name,symb,up,up_perc,high,low,price,open1,close1,pe1,cap1;
+    TextView name,symb,up,up_perc,high,low,price,open1,close1,pe1,cap1,name_pred,symbol_pred,pred_price;
     TabLayout tabLayout;
     ViewPager2 pager2;
+    ImageView arrow,arrow2;
     FrameLayout news;
+    LinearLayout prediction;
     LinearLayout data,stats;
+    ImageView image_pred;
     String name11;
     ViewPager2 viewPager2;
     RoundedImageView image;
@@ -100,7 +106,18 @@ public class StockView extends AppCompatActivity {
         espf    =findViewById(R.id.espf);
         esp12   =findViewById(R.id.esp12);
         espy    =findViewById(R.id.espy);
+        espy.setVisibility(View.GONE);
         espp    =findViewById(R.id.espp);
+        espp.setVisibility(View.GONE);
+        web1=findViewById(R.id.web1);
+        name_pred=findViewById(R.id.name_pred);
+        arrow=findViewById(R.id.arrow);
+        image_pred=findViewById(R.id.image_pred);
+        arrow2=findViewById(R.id.arrow2);
+        pred_price=findViewById(R.id.cap4);
+        prediction=findViewById(R.id.prediction);
+
+        symbol_pred=findViewById(R.id.symb_pred);
         chipNavigationBar.setItemSelected(R.id.home,
                 true);
         bottomMenu();
@@ -118,6 +135,44 @@ public class StockView extends AppCompatActivity {
         symbol=i.getStringExtra("symbol");
         Toast.makeText(StockView.this,symbol,Toast.LENGTH_SHORT).show();
         Picasso.get().load("https://finnhub.io/api/logo?symbol="+symbol+".NS").into(image);
+        Picasso.get().load("https://finnhub.io/api/logo?symbol="+symbol+".NS").into(image_pred);
+        Query query12=FirebaseDatabase.getInstance().getReference("Companies").orderByChild("Symbol").equalTo(symbol);
+        query12.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    for(DataSnapshot ds: dataSnapshot.getChildren()){
+                        String name1=""+ds.child("Predicted_Price").getValue().toString();
+                        String newsp=""+ds.child("News_Prediction").getValue().toString();
+                        String tweetp=""+ds.child("Tweet_Prediction").getValue().toString();
+                        if(newsp.equals("0")){
+                            arrow.setImageResource(R.drawable.arrowup);
+                        }
+                        else {
+                            arrow.setImageResource(R.drawable.arrowdown);
+                        }
+                        if(tweetp.equals("0")){
+                            arrow2.setImageResource(R.drawable.arrowup);
+                        }
+                        else {
+                            arrow2.setImageResource(R.drawable.arrowdown);
+                        }
+
+                        pred_price.setText(name1);
+                        Log.e("Pred",name1);
+                        break;
+                    }
+                }
+
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         data=findViewById(R.id.data);
         news=findViewById(R.id.news);
         open1=findViewById(R.id.open1);
@@ -159,6 +214,26 @@ public class StockView extends AppCompatActivity {
             @Override
             public void run() {
                 webView.loadUrl(link);
+            }
+        }, 500);
+        web1.loadUrl(link);
+        web1.setWebChromeClient(new WebChromeClient());
+        web1.getSettings().setJavaScriptEnabled(true);
+        web1.getSettings().setDomStorageEnabled(true);
+        web1.setWebViewClient(new WebViewClient());
+        web1.getSettings().setSaveFormData(true);
+        web1.getSettings().setAllowContentAccess(true);
+        web1.getSettings().setAllowFileAccess(true);
+        web1.getSettings().setAllowFileAccessFromFileURLs(true);
+        web1.getSettings().setAllowUniversalAccessFromFileURLs(true);
+        web1.getSettings().setSupportZoom(false);
+        web1.setClickable(true);
+        // Use remote resource
+        web1.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                web1.loadUrl(link);
             }
         }, 500);
         final Handler handler=new Handler();
@@ -218,8 +293,8 @@ public class StockView extends AppCompatActivity {
                                 c2002=itemObj.getString("twoHundredDayAverageChange");
                                 espf2=itemObj.getString("epsForward");
                                 esp122=itemObj.getString("epsTrailingTwelveMonths");
-                                espy2=itemObj.getString("epsCurrentYear");
-                                espp2=itemObj.getString("priceEpsCurrentYear");
+
+
                                 Float cha=Float.parseFloat(change);
                                 String price1 = itemObj.getString("regularMarketPrice");
                                 String regularMarketChangePercent=itemObj.getString("regularMarketChangePercent");
@@ -236,6 +311,8 @@ public class StockView extends AppCompatActivity {
                                         }
                                         name.setText(name1);
                                         symb.setText(symbol);
+                                        name_pred.setText(name1);
+                                        symbol_pred.setText(symbol);
                                         price.setText(price1+" INR");
                                         up.setText(change);
                                         up_perc.setText(regularMarketChangePercent+"%");
@@ -264,8 +341,8 @@ public class StockView extends AppCompatActivity {
                                         c200.setText(c2002);
                                         espf.setText(espf2);
                                         esp12.setText(esp122);
-                                        espy.setText(espy2);
-                                        espp.setText(espp2);
+
+
                                     }
                                 });
 
@@ -357,7 +434,7 @@ public class StockView extends AppCompatActivity {
             @Override
             public void onResponse(@NotNull Call call, @NotNull okhttp3.Response response) throws IOException {
                 String myresponse = response.body().string();
-
+                Log.e("data",myresponse);
 
                 try {
                     JSONObject songObject = new JSONObject(myresponse);
@@ -467,22 +544,25 @@ public class StockView extends AppCompatActivity {
                             case R.id.home:
                                 data.setVisibility(View.VISIBLE);
                                 news.setVisibility(View.GONE);
+                                prediction.setVisibility(View.GONE);
                                 stats.setVisibility(View.GONE);
                                 break;
                             case R.id.activity:
                                 stats.setVisibility(View.VISIBLE);
                                 data.setVisibility(View.GONE);
+                                prediction.setVisibility(View.GONE);
                                 news.setVisibility(View.GONE);
                                 break;
                             case R.id.settings:
                                 stats.setVisibility(View.GONE);
+                                prediction.setVisibility(View.VISIBLE);
                                 data.setVisibility(View.GONE);
-                                Toast.makeText(getApplicationContext(),"sad",Toast.LENGTH_SHORT).show();
                                 news.setVisibility(View.GONE);
                                 break;
                             case R.id.favorites:
                                 stats.setVisibility(View.GONE);
                                 data.setVisibility(View.GONE);
+                                prediction.setVisibility(View.GONE);
                                 news.setVisibility(View.VISIBLE);
                                 break;
                         }
@@ -565,6 +645,7 @@ public class StockView extends AppCompatActivity {
                                 name.setText(name1);
                                 symb.setText(symbol);
                                 price.setText(price1+" INR");
+                                float price=Float.parseFloat(price1);
                                 up.setText(change);
                                 up_perc.setText(regularMarketChangePercent+"%");
                                 high.setText(high_lev);
@@ -668,9 +749,8 @@ public class StockView extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i;
-        i = new Intent(StockView.this, Base.class);
-        i.putExtra("status","3");
+        onBackPressed();
+        Intent i=new Intent(this,Ground.class);
         startActivity(i);
     }
 }

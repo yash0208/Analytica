@@ -770,4 +770,11 @@ public class Demate extends AppCompatActivity implements DatePickerDialog.OnDate
                 Toast.LENGTH_SHORT).show();
         address_type=radioButton.getText().toString();
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i=new Intent(this,Ground.class);
+        startActivity(i);
+    }
 }

@@ -124,9 +124,7 @@ public class Data extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i;
-        i = new Intent(Data.this, Base.class);
-        i.putExtra("status","2");
+        Intent i=new Intent(this,Ground.class);
         startActivity(i);
     }
 }

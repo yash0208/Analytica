@@ -142,6 +142,12 @@ public class DailyData extends AppCompatActivity implements AdapterView.OnItemSe
         });
 
     }
+
+    public void back(View view) {
+        Intent i=new Intent(this,Ground.class);
+        startActivity(i);
+    }
+
     public class Adapter extends FirebaseRecyclerAdapter<Tracker,Adapter.viewholder> {
         /**
          * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
@@ -393,9 +399,8 @@ public class DailyData extends AppCompatActivity implements AdapterView.OnItemSe
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i;
-        i = new Intent(DailyData.this, Base.class);
-        i.putExtra("status","2");
+
+        Intent i=new Intent(this,Ground.class);
         startActivity(i);
     }
 }
